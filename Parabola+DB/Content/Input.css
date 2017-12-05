@@ -1,0 +1,16 @@
+﻿body {
+}
+
+input{
+    width:3em;
+}
+
+.buttonPlot{
+    width: 6em;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

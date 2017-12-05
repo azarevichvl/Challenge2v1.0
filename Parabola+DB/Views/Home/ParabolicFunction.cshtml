@@ -1,0 +1,49 @@
+﻿@model ParabolaDB.Models.Param
+
+<h3>Function data</h3>
+<form method="get">
+    <table>
+        <tr>
+            <td>
+                Function: y =
+
+            </td>
+            <td>
+                <span>@Html.ValidationMessageFor(model => model.CoefficientA)</span>
+                <input required class="text-box single-line" data-val="true" data-val-number="It should be a number" data-val-required="The field must be set" name="CoefficientA" type="number" step="any">
+                x^2+
+                <span>@Html.ValidationMessageFor(model => model.CoefficientB)</span>
+                <input required class="text-box single-line" data-val="true" data-val-number="It should be a number" data-val-required="The field must be set" name="CoefficientB" type="number" step="any">
+                x+
+                <span>@Html.ValidationMessageFor(model => model.CoefficientC)</span>
+                <input required class="text-box single-line" data-val="true" data-val-number="It should be a number" data-val-required="The field must be set" name="CoefficientC" type="number" step="any">
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Step:
+            </td>
+            <td>
+                <span>@Html.ValidationMessageFor(model => model.Step)</span>
+                <input required class="text-box single-line" data-val="true" data-val-number="It should be a number" data-val-required="The field must be set" id="step" name="Step" type="number" step="any">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Range:
+            </td>
+            <td>
+                <span>@Html.ValidationMessageFor(model => model.RangeFrom)</span>
+                <input required class="text-box single-line" data-val="true" data-val-number="It should be a number" data-val-required="The field must be set" name="RangeFrom" type="number" step="any">
+                to
+                <span>@Html.ValidationMessageFor(model => model.RangeTo)</span>
+                <input required class="text-box single-line" data-val="true" data-val-number="It should be a number" data-val-required="The field must be set" name="RangeTo" type="number" step="any">
+            </td>
+        </tr>
+
+
+        <tr><td><input type="submit" value="Plot" class="btn btn-default buttonPlot" /> </td><td></td></tr>
+    </table>
+
+</form>
